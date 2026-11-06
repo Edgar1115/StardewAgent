@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Unit tests for the game-agnostic parts of the mod (action executor, action wire format).
+    Compiles the mod's source files directly; nothing here references SMAPI or the game.
+    Targets the locally installed runtime; the mod itself stays net6.0.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../StardewAgentBridge/Actions/ActionExecutor.cs" />
+    <Compile Include="../../StardewAgentBridge/Actions/IGameControl.cs" />
+    <Compile Include="../../StardewAgentBridge/Transport/ActionContracts.cs" />
+    <Compile Include="../../StardewAgentBridge/Transport/ActionChannel.cs" />
+    <Compile Include="../../StardewAgentBridge/Transport/LocalHttp.cs" />
+    <Compile Include="../../StardewAgentBridge/Serialization/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

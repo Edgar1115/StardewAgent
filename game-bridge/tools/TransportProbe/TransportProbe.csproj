@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Offline test harness for the bridge transport. Compiles the mod's DTO, serialization and transport
+    sources directly (they don't reference SMAPI or the game), so the JSON is produced by the real code.
+    Targets the locally installed runtime; the mod itself stays net6.0.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../StardewAgentBridge/GameStateSnapshot.cs" />
+    <Compile Include="../../StardewAgentBridge/State/*.cs" />
+    <Compile Include="../../StardewAgentBridge/Serialization/*.cs" />
+    <Compile Include="../../StardewAgentBridge/Transport/*.cs" />
+    <Compile Include="../../StardewAgentBridge/Actions/ActionExecutor.cs" />
+    <Compile Include="../../StardewAgentBridge/Actions/IGameControl.cs" />
+  </ItemGroup>
+
+</Project>

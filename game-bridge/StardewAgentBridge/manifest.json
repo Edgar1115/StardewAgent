@@ -1,0 +1,10 @@
+{
+  "Name": "StardewAgentBridge",
+  "Author": "StardewAgent",
+  "Version": "0.3.0",
+  "Description": "Game bridge for the Stardew Valley autonomous agent. Game state to the local Python controller; basic actions once the player arms automation.",
+  "UniqueID": "StardewAgent.Bridge",
+  "EntryDll": "StardewAgentBridge.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

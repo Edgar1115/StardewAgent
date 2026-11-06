@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>StardewAgentBridge</AssemblyName>
+    <RootNamespace>StardewAgentBridge</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <!-- Explicit game path (macOS); auto-detection may fail for the .app bundle. -->
+    <GamePath>/Applications/Stardew Valley.app/Contents/MacOS</GamePath>
+    <!-- Deploy to Mods/StardewAgentBridge on build; skip the release zip. -->
+    <EnableModDeploy>true</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>
